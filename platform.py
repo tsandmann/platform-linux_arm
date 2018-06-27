@@ -23,11 +23,25 @@ class Linux_armPlatform(PlatformBase):
         systype = util.get_systype()
         return "linux_arm" in systype or "linux_aarch64" in systype
 
+    @staticmethod
+    def _is_macos():
+        systype = util.get_systype()
+        return "darwin_x86_64" in systype
+
+    @staticmethod
+    def _is_linux():
+        systype = util.get_systype()
+        return "linux_x86_64" in systype
+
     @property
     def packages(self):
         packages = PlatformBase.packages.fget(self)
         if self._is_native() and "toolchain-gccarmlinuxgnueabi" in packages:
             del packages['toolchain-gccarmlinuxgnueabi']
+        if self._is_linux() and "toolchain-mac-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-mac-gccarmlinuxgnueabi']
+        if self._is_macos() and "toolchain-linux-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-linux-gccarmlinuxgnueabi']
         return packages
 
     def configure_default_packages(self, variables, targets):

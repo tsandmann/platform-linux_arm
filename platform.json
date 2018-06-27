@@ -19,9 +19,15 @@
     }
   },
   "packages": {
-    "toolchain-gccarmlinuxgnueabi": {
+    "toolchain-mac-gccarmlinuxgnueabi": {
       "type": "toolchain",
       "version": "https://github.com/tsandmann/armv8l-toolchain-mac.git"
+    }
+  },
+  "packages": {
+    "toolchain-linux-gccarmlinuxgnueabi": {
+      "type": "toolchain",
+      "version": "https://github.com/tsandmann/armv8l-toolchain-linux.git"
     }
   }
 }
