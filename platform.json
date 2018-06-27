@@ -12,21 +12,12 @@
     "type": "git",
     "url": "https://github.com/tsandmann/platform-linux_arm.git"
   },
-  "version": "1.4.6",
-  "packageRepositories": [
-    "https://dl.bintray.com/platformio/dl-packages/manifest.json",
-    "http://dl.platformio.org/packages/manifest.json",
-    "http://repo.artik.cloud/artik/bin/pub/platformio/manifest.json"
-  ],
+  "version": "1.8.1",
   "frameworks": {
-  "wiringpi": {
-    "package": "framework-wiringpi",
-    "script": "builder/frameworks/wiringpi.py"
+    "linux": {
+      "script": "builder/frameworks/linux.py"
+    }
   },
-  "linux": {
-    "script": "builder/frameworks/linux.py"
-  }
-},
   "packages": {
     "toolchain-gccarmlinuxgnueabi": {
       "type": "toolchain",
