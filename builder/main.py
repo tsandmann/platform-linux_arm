@@ -24,22 +24,17 @@ env = DefaultEnvironment()
 
 env.Replace(
     _BINPREFIX="",
-    AR="${_BINPREFIX}ar",
-    AS="${_BINPREFIX}as",
-    CC="${_BINPREFIX}gcc",
-    CXX="${_BINPREFIX}g++",
-    GDB="${_BINPREFIX}gdb",
-    OBJCOPY="${_BINPREFIX}objcopy",
-    RANLIB="${_BINPREFIX}ranlib",
-    SIZETOOL="${_BINPREFIX}size",
+    AR="armv8l-linux-gnueabihf-ar",
+    AS="armv8l-linux-gnueabihf-as",
+    CC="armv8l-linux-gnueabihf-gcc",
+    CXX="armv8l-linux-gnueabihf-g++",
+    GDB="armv8l-linux-gnueabihf-gdb",
+    OBJCOPY="armv8l-linux-gnueabihf-objcopy",
+    RANLIB="armv8l-linux-gnueabihf-ranlib",
+    SIZETOOL="armv8l-linux-gnueabihf-size",
 
     SIZEPRINTCMD='$SIZETOOL $SOURCES'
 )
-
-if get_systype() == "darwin_x86_64":
-    env.Replace(
-        _BINPREFIX="arm-linux-gnueabihf-"
-    )
 
 #
 # Target: Build executable program

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-linux_arm.git"
+    "url": "https://github.com/tsandmann/platform-linux_arm.git"
   },
   "version": "1.4.6",
   "packageRepositories": [
@@ -19,29 +19,18 @@
     "http://repo.artik.cloud/artik/bin/pub/platformio/manifest.json"
   ],
   "frameworks": {
-    "wiringpi": {
-      "package": "framework-wiringpi",
-      "script": "builder/frameworks/wiringpi.py"
-    },
-    "artik-sdk": {
-      "package": "framework-artik-sdk",
-      "script": "builder/frameworks/artik-sdk.py"
-    }
+  "wiringpi": {
+    "package": "framework-wiringpi",
+    "script": "builder/frameworks/wiringpi.py"
   },
+  "linux": {
+    "script": "builder/frameworks/linux.py"
+  }
+},
   "packages": {
     "toolchain-gccarmlinuxgnueabi": {
       "type": "toolchain",
-      "version": "~1.40802.0"
-    },
-    "framework-wiringpi": {
-      "type": "framework",
-      "optional": true,
-      "version": "~1.242.0"
-    },
-    "framework-artik-sdk": {
-      "type": "framework",
-      "optional": true,
-      "version": "*"
+      "version": "https://github.com/tsandmann/armv8l-toolchain-mac.git"
     }
   }
 }
