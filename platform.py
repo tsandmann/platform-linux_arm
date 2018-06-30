@@ -16,7 +16,7 @@ from platformio import exception, util
 from platformio.managers.platform import PlatformBase
 
 
-class Linux_armPlatform(PlatformBase):
+class Linux_armv8lPlatform(PlatformBase):
 
     @staticmethod
     def _is_native():
@@ -36,12 +36,14 @@ class Linux_armPlatform(PlatformBase):
     @property
     def packages(self):
         packages = PlatformBase.packages.fget(self)
-        if self._is_native() and "toolchain-gccarmlinuxgnueabi" in packages:
-            del packages['toolchain-gccarmlinuxgnueabi']
-        if self._is_linux() and "toolchain-mac-gccarmlinuxgnueabi" in packages:
-            del packages['toolchain-mac-gccarmlinuxgnueabi']
-        if self._is_macos() and "toolchain-linux-gccarmlinuxgnueabi" in packages:
-            del packages['toolchain-linux-gccarmlinuxgnueabi']
+        if self._is_native() and "toolchain-mac-gccarmv8linuxgnueabi" in packages:
+            del packages['toolchain-mac-gccarmv8linuxgnueabi']
+        if self._is_native() and "toolchain-linux-gccarmv8linuxgnueabi" in packages:
+            del packages['toolchain-linux-gccarmv8linuxgnueabi']
+        if self._is_linux() and "toolchain-mac-gccarmv8linuxgnueabi" in packages:
+            del packages['toolchain-mac-gccarmv8linuxgnueabi']
+        if self._is_macos() and "toolchain-linux-gccarmv8linuxgnueabi" in packages:
+            del packages['toolchain-linux-gccarmv8linuxgnueabi']
         return packages
 
     def configure_default_packages(self, variables, targets):

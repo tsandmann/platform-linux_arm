@@ -1,7 +1,7 @@
 {
-  "name": "linux_arm",
-  "title": "Linux ARM",
-  "description": "Linux ARM is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. Using host OS (Mac OS X, Linux ARM) you can build native application for Linux ARM platform.",
+  "name": "linux_armv8l",
+  "title": "Linux ARMv8",
+  "description": "Linux ARMv8 is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. Using host OS (Mac OS X, Linux ARM) you can build native application for Linux ARM platform.",
   "url": "http://platformio.org/platforms/linux_arm",
   "homepage": "http://platformio.org/platforms/linux_arm",
   "license": "Apache-2.0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tsandmann/platform-linux_arm.git"
+    "url": "https://github.com/tsandmann/platform-linux_armv8l.git"
   },
   "version": "1.8.1",
   "frameworks": {
@@ -19,13 +19,13 @@
     }
   },
   "packages": {
-    "toolchain-mac-gccarmlinuxgnueabi": {
+    "toolchain-mac-gccarmv8linuxgnueabi": {
       "type": "toolchain",
       "version": "https://github.com/tsandmann/armv8l-toolchain-mac.git"
     }
   },
   "packages": {
-    "toolchain-linux-gccarmlinuxgnueabi": {
+    "toolchain-linux-gccarmv8linuxgnueabi": {
       "type": "toolchain",
       "version": "https://github.com/tsandmann/armv8l-toolchain-linux.git"
     }

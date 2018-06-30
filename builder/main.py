@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """
-    Builder for Linux ARM
+    Builder for Linux ARMv8
 """
 
 from SCons.Script import AlwaysBuild, Default, DefaultEnvironment
