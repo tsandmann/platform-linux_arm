@@ -36,14 +36,14 @@ class Linux_armv8lPlatform(PlatformBase):
     @property
     def packages(self):
         packages = PlatformBase.packages.fget(self)
-        if self._is_native() and "toolchain-mac-gccarmv8linuxgnueabi" in packages:
-            del packages['toolchain-mac-gccarmv8linuxgnueabi']
-        if self._is_native() and "toolchain-linux-gccarmv8linuxgnueabi" in packages:
-            del packages['toolchain-linux-gccarmv8linuxgnueabi']
-        if self._is_linux() and "toolchain-mac-gccarmv8linuxgnueabi" in packages:
-            del packages['toolchain-mac-gccarmv8linuxgnueabi']
-        if self._is_macos() and "toolchain-linux-gccarmv8linuxgnueabi" in packages:
-            del packages['toolchain-linux-gccarmv8linuxgnueabi']
+        if self._is_native() and "toolchain-mac-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-mac-gccarmlinuxgnueabi']
+        if self._is_native() and "toolchain-linux-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-linux-gccarmlinuxgnueabi']
+        if self._is_linux() and "toolchain-mac-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-mac-gccarmlinuxgnueabi']
+        if self._is_macos() and "toolchain-linux-gccarmlinuxgnueabi" in packages:
+            del packages['toolchain-linux-gccarmlinuxgnueabi']
         return packages
 
     def configure_default_packages(self, variables, targets):
